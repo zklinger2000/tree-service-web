@@ -1,0 +1,194 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+/*  font-size: 1.2em;*/
+}
+h1, h2, h3, h4 {
+  font-family: 'Kreon', sans-serif;
+}
+li {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+}
+.content-wrapper {
+/*  margin: 0 25px;*/
+}
+header {
+  font-family: 'Ubuntu', sans-serif;
+  background-color: #a1a838;
+  text-align: center;
+  color: #273016;
+}
+header h1 {
+  margin: 15px 0;
+  font-size: 2.8em;
+}
+.brand-logo {
+  background-color: #475A24;
+}
+.brand-logo img {
+  width: 200px;
+}
+.glyphicon {
+  padding-left: 15px;
+}
+.isa-logo {
+  text-align: center;
+  background: url(img/isa_logo.jpg) no-repeat top center;
+  background-size: cover;
+  overflow: hidden;
+  min-height: 400px;
+  position: relative;
+}
+header div {
+  padding: 10px;
+  font-size: 1.8em;
+}
+.main-nav .nav-link {
+  margin: 15px;
+  padding: 5px;
+  border-radius: 10px;
+  box-shadow: 2px 2px 5px 1px rgba(0,0,0,.2);
+  width: 150px;
+  font-size: 1.7em;
+  background-color: #e5f041;
+}
+.services-content, .about-content, .contact-content {
+  font-family: 'Ubuntu', sans-serif;
+  text-align: center;
+  color: #273016;
+  padding: 25px;
+  font-size: 1.5em;
+  text-align: left;
+}
+.services-content {
+  background-color: #e7fAc4;  
+}
+.services-content ul {
+  text-align: center;
+  font-weight: bold;
+  display: inline;
+}
+.services-content ul li {
+  padding: 5px;
+}
+.about-content {
+  background-color: #f6ffd3;
+}
+.about-content h3 {
+  text-align: center;
+}
+.contact-content {
+  background-color: #475a24;
+  color: #c1c858;
+}
+.contact-content h3 {
+  text-align: center;
+}
+.contact-row label {
+  color: #a1a858;
+  text-align: right;
+  margin: 5px 10px;
+}
+.contact-info p {
+  font-size: 1.1em;
+  text-align: left;
+  margin: 5px 10px;
+  font-weight: bold;
+}
+footer {
+  background-color: #162a14;
+  color: #eee;
+  padding: 0 25px;
+}
+
+
+/* Flexbox */
+.content-wrapper {
+  display: flex;
+  flex-direction: column;
+/*  justify-content: center;*/
+}
+header {
+  justify-content: center;
+}
+.main-nav {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.main-nav .nav-link {
+  align-self: center;
+}
+.contact-row {
+  display: flex;
+}
+.contact-row label {
+  flex: 1;
+}
+.contact-info {
+  flex: 2;
+}
+
+/* Styles for larger screens */
+@media screen and (min-width: 768px) {
+ 
+  header {
+    background-color: #273016;
+/*    color: white;*/
+  }
+  .main-header {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+  .brand-logo {
+    flex: 1;
+  }
+  .main-header h1 {
+    font-size: 4.5em;
+    text-align: left;
+    line-height: 1.2em;
+    margin: 0;
+    padding: 15px 0;
+    padding-left: 45px;
+    padding-right: 20vw;
+    background-color: #a1a838;
+    flex: 1 0 300px;
+  }
+  .main-nav {
+    flex-direction: row;
+/*    justify-content: center;*/
+  }
+  .email-estimate, .phone-number {
+/*    flex: 1 0 45%;*/
+    color: #e7fAc4;
+    margin-top: 5px;
+  }
+  .main-nav .nav-link {
+    background-color: inherit;
+    box-shadow: none;
+/*    flex: 1 0 50%;*/
+    color: #e7fAc4;
+    margin: 0;
+    padding: 15px
+  }
+  .services-content {
+/*    max-width: 500px;*/
+/*    flex: 1;*/
+/*    align-self: center;*/
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+/*    padding: auto;*/
+  }
+  .services-content p {
+    font-size: 1.2em;
+    width: 600px;
+    align-self: center
+  }
+}
